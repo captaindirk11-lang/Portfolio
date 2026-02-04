@@ -1,0 +1,42 @@
+/* Basic reset */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #00d9ff;
+  color: #333333;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap');
+
+/* Heading style */
+h1 {
+  font-family: 'Oswald', sans-serif; /* Bold and dramatic for the title */
+  font-size: 2.25em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Paragraph style */
+p {
+  font-family: 'Roboto', sans-serif; /* Clean and modern for body text */
+  font-size: 1.1875em;
+  line-height: 1.6;
+  text-indent: 2em;
+}
+
+/* Image styling */
+img {
+  border: 3mm solid #f8f8f8; /* Off-white border */
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Resize the later two images */
+.section:nth-of-type(3) img,
+.section:nth-of-type(4) img {
+  max-width: 60%; /* Shrinks image width to 60% of container */
+}

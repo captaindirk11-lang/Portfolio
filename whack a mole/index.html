@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Whack-a-Mole Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="instructionsModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>How to Play</h2>
+            <ul>
+                <li>Click <b>Start</b> to begin.</li>
+                <li>Find and click the <b>goal image</b> shown in the banner.</li>
+                <li>Ignore decoys! Only the correct image scores points.</li>
+                <li>Try to get the highest score before time runs out.</li>
+            </ul>
+            <button id="closeInstructions">Got it!</button>
+        </div>
+    </div>
+
+    <div id="hud">
+        <div id="scoreboard">
+            <h3>Score: <span id="score">0</span> <span id="multiplier" style="font-size:0.8em;color:#2b8aef;"></span>
+            </h3>
+            <div class="meta">
+                <span>Lives: <span id="lives">3</span></span>
+                <span>Time: <span id="timer">60</span>s</span>
+            </div>
+            <div id="timerBarContainer">
+                <div id="timerBar"></div>
+            </div>
+        </div>
+
+        <div id="directiveBanner">
+            <img id="directiveThumb" src="img/bryson.png" alt="directive" />
+            <div id="directiveText">Find: <strong id="targetName">Object 1</strong></div>
+        </div>
+
+        <div id="controls">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="restartBtn">Restart</button>
+        </div>
+    </div>
+
+    <div id="gameboard">
+        <div id="playArea">
+            <img src="img/bryson.png" id="object1" class="target" data-name="Bryson" alt="Bryson">
+            <img src="img/dirk.png" id="object2" class="target" data-name="Dirk" alt="Dirk">
+            <img src="img/jonah.png" id="object3" class="target" data-name="Jonah" alt="Jonah">
+        </div>
+    </div>
+
+    <div id="gameOver" class="hidden">
+        <div class="box">
+            <h2>Game Over</h2>
+            <p>Your score: <span id="finalScore">0</span></p>
+            <button id="playAgain">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Show instructions modal on first load
+        window.addEventListener('DOMContentLoaded', function () {
+            var modal = document.getElementById('instructionsModal');
+            var closeBtn = document.getElementById('closeInstructions');
+            if (modal && closeBtn) {
+                modal.classList.remove('hidden');
+                closeBtn.onclick = function () {
+                    modal.classList.add('hidden');
+                };
+            }
+        });
+    </script>
+</body>
+
+</html>

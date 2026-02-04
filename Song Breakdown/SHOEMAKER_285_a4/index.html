@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smells Like Teen Spirit Breakdown</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: 'Impact', sans-serif;
+            background-color: #111;
+        }
+
+        #waveform-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #button-grid {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: grid;
+            grid-template-columns: repeat(7, auto);
+            gap: 6px;
+            z-index: 2;
+        }
+
+        .segment-button {
+            padding: 10px 6px;
+            background-color: #222;
+            color: #f0f0f0;
+            border: 1px solid #888;
+            border-radius: 2px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+        }
+
+        .segment-button:hover {
+            background-color: #444;
+            border-color: #fff;
+        }
+
+        #waveform-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="waveform-container">
+        <!-- 🎸 Nirvana-style button grid -->
+        <div id="button-grid">
+            <button class="segment-button" onclick="playSegment('intro')">Intro</button>
+            <button class="segment-button" onclick="playSegment('verse1')">Verse 1</button>
+            <button class="segment-button" onclick="playSegment('pre-chorus')">Pre-Chorus</button>
+            <button class="segment-button" onclick="playSegment('chorus')">Chorus</button>
+            <button class="segment-button" onclick="playSegment('verse2')">Verse 2</button>
+            <button class="segment-button" onclick="playSegment('solo')">Solo</button>
+            <button class="segment-button" onclick="playSegment('outro')">Outro</button>
+            <button class="segment-button" onclick="playSegment('post-chorus')">Post-Chorus</button>
+            <button class="segment-button" onclick="playSegment('verse3')">Verse 3</button>
+        </div>
+
+        <!-- 🎵 Waveform background -->
+        <img id="waveform-image" src="img/base.png" alt="Waveform">
+    </div>
+
+    <!-- 🔊 Audio elements -->
+    <audio id="intro" src="audio/intro.mp3"></audio>
+    <audio id="verse1" src="audio/verse1.mp3"></audio>
+    <audio id="pre-chorus" src="audio/pre-chorus.mp3"></audio>
+    <audio id="chorus" src="audio/chorus.mp3"></audio>
+    <audio id="verse2" src="audio/verse2.mp3"></audio>
+    <audio id="solo" src="audio/solo.mp3"></audio>
+    <audio id="outro" src="audio/outro.mp3"></audio>
+    <audio id="post-chorus" src="audio/post-chorus.mp3"></audio>
+    <audio id="verse3" src="audio/verse3.mp3"></audio>
+
+    <script>
+        function playSegment(id) {
+            document.querySelectorAll('audio').forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+            const selected = document.getElementById(id);
+            if (selected) {
+                selected.play();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+body {
+    background: #18191a;
+    color: #e0e0e0;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    padding: 2em;
+    background-image: url("img/wolf.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+}
+
+
+header {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+    color: #c0c0c0;
+    letter-spacing: 0.6px;
+    text-shadow: 0 2px 6px #000, 0 0 8px #b71c1c;
+}
+
+.main-img {
+    width: 450px;
+    max-width: 85%;
+    height: auto;
+    border: 8px solid #b71c1c;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    box-shadow: 0 6px 18px #222, 0 0 16px #b71c1c44;
+}
+
+@media (max-width: 600px) {
+    .main-img {
+        width: 90%;
+        border-width: 6px;
+    }
+}
+
+.caption {
+    font-style: italic;
+    margin-bottom: 2em;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 0.45em 0.9em;
+    background-color: #b71c1c;
+    color: #e0e0e0;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 2px solid #c0c0c0;
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+    box-shadow: 0 3px 8px #222;
+}
+
+.nav-button:hover {
+    background-color: #c62828;
+    color: #fff;
+    border-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px #b71c1c99;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0.6rem 0 1.2rem 0;
+}
+
+.caption {
+    font-style: italic;
+    margin-bottom: 1.4em;
+    line-height: 1.5;
+    color: #b0b0b0;
+}
+
+/* subtle image hover effect */
+.main-img {
+    transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+.main-img:hover {
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6);
+}

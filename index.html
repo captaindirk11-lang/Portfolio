@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirk Shoemaker - Game Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="bg-stars"></canvas>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="audio-design.html">Audio Design</a></li>
+            <li><a href="interactive-design.html">Interactive Design</a></li>
+            <li><a href="media-apps.html">Media Apps</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div>
+            <h1><span id="typewriter"></span></h1>
+            <p>Game Designer & College Student at West Virginia University</p>
+            <a href="#about" class="cta-button">Learn More About Me</a>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I'm <strong>Dirk Shoemaker</strong>, an aspiring game designer currently studying at
+                    <strong>West Virginia University</strong>. I am passionate about creating engaging and memorable
+                    gaming experiences, combining creativity with technical skills to bring innovative game concepts to
+                    life.
+                </p>
+                <br>
+                <p>My inspiration comes from the games I grew up playing and the lasting feelings they gave me. My goal
+                    as a designer is to recreate that same sense of joy, wonder, and meaningful experience for others. I
+                    strive to build worlds and mechanics that spark imagination, foster connection, and leave a positive
+                    impact. Ultimately, I want to create more than I destroy—crafting experiences that inspire, uplift,
+                    and bring people together through play.</p>
+                <br>
+                <p>My journey in game design is driven by a love for storytelling, mechanics design, and crafting
+                    experiences that resonate with players. I enjoy working on both solo and collaborative projects, and
+                    I'm always eager to learn new technologies and design methodologies. My portfolio showcases a range
+                    of work from audio design to interactive media and coding for games and apps.</p>
+                <br>
+                <p><strong>Email:</strong> <a href="mailto:das00063@mix.wvu.edu">das00063@mix.wvu.edu</a></p>
+                <p><strong>Location:</strong> Morgantown, WV</p>
+            </div>
+            <div class="about-image">
+                <div class="profile-placeholder">🎮</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Game Design</h3>
+                <ul>
+                    <li>Level Design</li>
+                    <li>Game Mechanics</li>
+                    <li>Game Balancing</li>
+                    <li>Narrative Design</li>
+                </ul>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Development Tools</h3>
+                <ul>
+                    <li>Unity</li>
+                    <li>Unreal Engine</li>
+                    <li>Godot</li>
+                    <li>GameMaker</li>
+                </ul>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <ul>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                </ul>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Creative Tools</h3>
+                <ul>
+                    <li>Adobe Creative Suite</li>
+                    <li>Blender (3D Modeling)</li>
+                    <li>Audio Design</li>
+                    <li>UI/UX Design</li>
+                </ul>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 65%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>Explore My Work</h2>
+        <div class="projects-grid">
+            <a href="audio-design.html" class="project-card">
+                <div class="project-image">
+                    <img src="assets/Attack1.gif" alt="Audio Design Projects" class="sprite-icon"
+                        data-sprites="Attack1.gif" />
+                </div>
+                <div class="project-content">
+                    <h3>Audio Design</h3>
+                    <p>Sound design, music, and audio visualizations for games and media.</p>
+                </div>
+            </a>
+            <a href="interactive-design.html" class="project-card">
+                <div class="project-image">
+                    <img src="assets/Attack2.gif" alt="Interactive Design Projects" class="sprite-icon"
+                        data-sprites="Attack2.gif" />
+                </div>
+                <div class="project-content">
+                    <h3>Interactive Design</h3>
+                    <p>Game mechanics, user interactions, and engaging experiences.</p>
+                </div>
+            </a>
+            <a href="media-apps.html" class="project-card">
+                <div class="project-image">
+                    <img src="assets/Attack.gif" alt="Media Apps Projects" class="sprite-icon"
+                        data-sprites="Attack.gif" />
+                </div>
+                <div class="project-content">
+                    <h3>Media Apps</h3>
+                    <p>Games and tools like Corridor Crawler and Text Engine, built for the web.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dirk Shoemaker. All rights reserved.</p>
+    </footer>
+
+    <canvas id="overlay-grid"></canvas>
+    <script src="main.js"></script>
+    <script>
+        // Digital overlay animation
+        const overlay = document.getElementById('overlay-grid');
+        function resizeOverlay() {
+            overlay.width = window.innerWidth;
+            overlay.height = window.innerHeight;
+        }
+        resizeOverlay();
+        window.addEventListener('resize', resizeOverlay);
+        const ctx = overlay.getContext('2d');
+        function drawOverlay() {
+            ctx.clearRect(0, 0, overlay.width, overlay.height);
+            ctx.save();
+            ctx.globalAlpha = 0.13;
+            // Draw grid
+            ctx.strokeStyle = '#76E5FC';
+            ctx.lineWidth = 1;
+            for (let x = 0; x < overlay.width; x += 60) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, overlay.height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < overlay.height; y += 60) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(overlay.width, y);
+                ctx.stroke();
+            }
+            // Animated moving lines
+            const t = Date.now() / 900;
+            ctx.globalAlpha = 0.18;
+            ctx.strokeStyle = '#4BC0D9';
+            for (let i = 0; i < 4; i++) {
+                ctx.beginPath();
+                let y = (t * 60 + i * 120) % overlay.height;
+                ctx.moveTo(0, y);
+                ctx.lineTo(overlay.width, y);
+                ctx.stroke();
+            }
+            ctx.restore();
+            requestAnimationFrame(drawOverlay);
+        }
+        drawOverlay();
+    </script>
+</body>
+
+</html>

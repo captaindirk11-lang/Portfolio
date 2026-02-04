@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'Work Sans', sans-serif;
+  src: url('fonts/font.ttf');
+}
+
+/* Cyberpunk / Neon theme: dark background with neon text and glow */
+body {
+  background: radial-gradient(ellipse at center, #071020 0%, #00040a 60%);
+  color: #bfeeff;
+  /* soft cyan for body text */
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  line-height: 30px;
+  margin: 96px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(63, 255, 240, 0.18), rgba(255, 0, 255, 0.12));
+  border-radius: 8px;
+}
+
+br {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.img {
+  white-space: pre;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  font-family: 'Nanum Gothic Coding', monospace;
+  transform: translateX(-50%);
+  line-height: 11.67px;
+  color: #7ff9f7;
+  text-shadow: 0 0 8px rgba(63, 255, 240, 0.3);
+}
+
+.room-name {
+  margin-top: 60px;
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 36px;
+  color: #8bf1ff;
+  text-shadow: 0 0 12px rgba(139, 241, 255, 0.25);
+}
+
+.title {
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 120px;
+  line-height: 88px;
+  color: #ff6ec7;
+  text-shadow: 0 0 18px rgba(255, 110, 199, 0.22), 0 0 32px rgba(63, 255, 240, 0.06);
+}
+
+#output {
+  padding: 28px 28px 0 28px;
+}
+
+#output div {
+  margin-bottom: 14px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+}
+
+#input {
+  color: #7ff9f7;
+  background: rgba(255, 255, 255, 0.02);
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  border: none;
+  position: relative;
+  bottom: 1px;
+  margin-left: 8px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  box-shadow: inset 0 0 18px rgba(63, 255, 240, 0.04);
+}
+
+.ml-2 {
+  margin-left: 18px;
+}
+
+#input:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(139, 241, 255, 0.12);
+}
+
+/* color the user's input & links */
+.user,
+a {
+  color: #7ff9f7;
+  text-decoration: none;
+}
+
+/* small neon accents for inline classes */
+.hint {
+  color: #ffd479;
+  text-shadow: 0 0 8px rgba(255, 212, 121, 0.12);
+}
+
+.warning {
+  color: #ff6ec7;
+}
+
+@keyframes blink {
+  0% {
+    background: #7ff9f7;
+  }
+
+  49% {
+    background: #7ff9f7;
+  }
+
+  60% {
+    background: transparent;
+  }
+
+  99% {
+    background: transparent;
+  }
+
+  100% {
+    background: #7ff9f7;
+  }
+}
+
+/* Flickering neon effect */
+@keyframes neon-flicker {
+
+  0%,
+  100% {
+    text-shadow: 0 0 8px rgba(63, 255, 240, 0.8), 0 0 16px rgba(63, 255, 240, 0.6);
+  }
+
+  50% {
+    text-shadow: 0 0 4px rgba(63, 255, 240, 0.4), 0 0 8px rgba(63, 255, 240, 0.2);
+  }
+}
+
+.neon {
+  color: #7ff9f7;
+  animation: neon-flicker 1.5s infinite;
+}
+
+/* Glitch effect */
+@keyframes glitch {
+  0% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+
+  25% {
+    clip-path: inset(10% 0% 85% 0%);
+  }
+
+  50% {
+    clip-path: inset(85% 0% 10% 0%);
+  }
+
+  75% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+.glitch {
+  position: relative;
+  color: #ff6ec7;
+  animation: glitch 1s infinite;
+}
