@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shoemaker_a6 Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>The Core</h1>
+
+    <div class="theme-switcher">
+        <button class="theme-btn" data-theme="cyan" title="Cyan Matrix">◆</button>
+        <button class="theme-btn" data-theme="purple" title="Purple Void">◆</button>
+        <button class="theme-btn" data-theme="green" title="Green Terminal">◆</button>
+        <button class="theme-btn" data-theme="red" title="Red Alert">◆</button>
+        <button class="theme-btn" data-theme="gold" title="Gold Empire">◆</button>
+        <button class="theme-btn" data-theme="blue" title="Deep Blue">◆</button>
+    </div>
+
+    <div class="audio-panel">
+        <div class="file-input-wrapper">
+            <input type="file" id="thefile" accept="audio/*">
+            <label for="thefile" class="file-label">
+                <span class="file-icon">◈</span>
+                <span class="file-text">LOAD AUDIO FILE</span>
+            </label>
+        </div>
+
+        <audio id="audio" style="display: none;"></audio>
+
+        <div class="custom-player" id="customPlayer">
+            <div class="player-status">
+                <div class="status-indicator"></div>
+                <span class="status-text">AUDIO SYSTEM STANDBY</span>
+            </div>
+
+            <div class="player-controls">
+                <button class="control-btn" id="playPauseBtn">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon" style="display: none;">❚❚</span>
+                </button>
+
+                <div class="time-display">
+                    <span id="currentTime">00:00</span>
+                    <span class="time-separator">/</span>
+                    <span id="duration">00:00</span>
+                </div>
+
+                <div class="seek-container">
+                    <div class="seek-bar" id="seekBar">
+                        <div class="seek-progress" id="seekProgress"></div>
+                        <div class="seek-handle" id="seekHandle"></div>
+                    </div>
+                </div>
+
+                <div class="volume-container">
+                    <button class="control-btn volume-btn" id="volumeBtn">
+                        <span class="volume-icon">🔊</span>
+                    </button>
+                    <div class="volume-slider-wrapper">
+                        <div class="volume-bar" id="volumeBar">
+                            <div class="volume-progress" id="volumeProgress"></div>
+                            <div class="volume-handle" id="volumeHandle"></div>
+                        </div>
+                    </div>
+                    <span class="volume-value" id="volumeValue">100</span>
+                </div>
+            </div>
+
+            <div class="waveform-preview">
+                <canvas id="waveformCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="visualizer.js"></script>
+</body>
+
+</html>
