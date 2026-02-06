@@ -12,7 +12,8 @@ body {
 
 /* Heading style */
 h1 {
-  font-family: 'Oswald', sans-serif; /* Bold and dramatic for the title */
+  font-family: 'Oswald', sans-serif;
+  /* Bold and dramatic for the title */
   font-size: 2.25em;
   margin-bottom: 10px;
   text-align: center;
@@ -20,7 +21,8 @@ h1 {
 
 /* Paragraph style */
 p {
-  font-family: 'Roboto', sans-serif; /* Clean and modern for body text */
+  font-family: 'Roboto', sans-serif;
+  /* Clean and modern for body text */
   font-size: 1.1875em;
   line-height: 1.6;
   text-indent: 2em;
@@ -28,7 +30,8 @@ p {
 
 /* Image styling */
 img {
-  border: 3mm solid #f8f8f8; /* Off-white border */
+  border: 3mm solid #f8f8f8;
+  /* Off-white border */
   display: block;
   margin: 10px auto;
   max-width: 100%;
@@ -38,5 +41,54 @@ img {
 /* Resize the later two images */
 .section:nth-of-type(3) img,
 .section:nth-of-type(4) img {
-  max-width: 60%; /* Shrinks image width to 60% of container */
+  max-width: 60%;
+  /* Shrinks image width to 60% of container */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.75em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1em;
+    text-indent: 1em;
+  }
+
+  .section:nth-of-type(3) img,
+  .section:nth-of-type(4) img {
+    max-width: 80%;
+  }
+
+  img {
+    border-width: 2mm;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.95em;
+  }
+
+  .section:nth-of-type(3) img,
+  .section:nth-of-type(4) img {
+    max-width: 100%;
+  }
 }

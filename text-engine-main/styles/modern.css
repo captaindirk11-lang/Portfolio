@@ -98,6 +98,63 @@ br {
   box-shadow: 0 0 12px rgba(139, 241, 255, 0.12);
 }
 
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  body {
+    margin: 48px 24px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .title {
+    font-size: 80px;
+    line-height: 64px;
+  }
+
+  .room-name {
+    font-size: 28px;
+    margin-top: 40px;
+  }
+
+  #output {
+    padding: 18px 18px 0 18px;
+  }
+
+  #input {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 24px 12px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .title {
+    font-size: 60px;
+    line-height: 48px;
+  }
+
+  .room-name {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  #output {
+    padding: 12px 12px 0 12px;
+  }
+
+  #input {
+    font-size: 16px;
+  }
+
+  .ml-2 {
+    margin-left: 12px;
+  }
+}
+
 /* color the user's input & links */
 .user,
 a {

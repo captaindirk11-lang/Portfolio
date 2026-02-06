@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
   font-family: 'Apple II';
   src: url('../fonts/font.ttf');
 }
@@ -9,9 +9,7 @@ body {
   font-family: 'Apple II';
   line-height: 4vh;
   /* screen glow */
-  background-image: radial-gradient(
-    #1f0b00, black 120%
-  );
+  background-image: radial-gradient(#1f0b00, black 120%);
   /* text glow */
   text-shadow: 0 0 5px rgba(255, 78, 0, 0.6);
 }
@@ -87,9 +85,54 @@ span {
 }
 
 @keyframes blink {
-  0% {background: orange;}
-  49% {background: orange;}
-  60% {background: transparent;}
-  99% {background: transparent;}
-  100% {background: orange;}
+  0% {
+    background: orange;
+  }
+
+  49% {
+    background: orange;
+  }
+
+  60% {
+    background: transparent;
+  }
+
+  99% {
+    background: transparent;
+  }
+
+  100% {
+    background: orange;
+  }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 2vh;
+  }
+
+  #output {
+    padding: 4vw 4vw 0 4vw;
+  }
+
+  #input {
+    width: 90vw;
+    font-size: 1.8vh;
+  }
+
+  span {
+    margin-left: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.8vh;
+    line-height: 3.5vh;
+  }
+
+  #input {
+    font-size: 1.6vh;
+  }
 }

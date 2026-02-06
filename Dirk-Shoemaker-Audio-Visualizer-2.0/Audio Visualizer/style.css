@@ -20,3 +20,32 @@ canvas {
     border: 2px solid #222;
     box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05);
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+        margin: 10px;
+    }
+
+    canvas {
+        height: 60vh;
+        margin: 10px auto;
+    }
+
+    input[type="file"],
+    audio {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    canvas {
+        height: 50vh;
+    }
+}

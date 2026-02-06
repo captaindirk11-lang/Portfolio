@@ -45,3 +45,43 @@ body {
 .creep {
     background-color: blue;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    body {
+        margin-top: 20px;
+    }
+
+    #grid {
+        width: 250px;
+        height: 250px;
+        margin: 30px auto;
+    }
+
+    #startButton {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin-top: 15px;
+    }
+
+    #grid {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+    }
+
+    .dot {
+        width: 16px;
+        height: 16px;
+    }
+
+    #startButton {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}

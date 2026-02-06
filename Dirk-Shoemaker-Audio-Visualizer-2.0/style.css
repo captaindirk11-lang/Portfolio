@@ -400,3 +400,58 @@ canvas {
     position: relative;
     z-index: 1;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+        margin: 10px;
+        letter-spacing: 1px;
+    }
+
+    canvas {
+        height: 60vh;
+        margin: 10px auto;
+    }
+
+    .theme-switcher {
+        top: 10px;
+        right: 10px;
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .theme-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    input[type="file"],
+    audio {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    canvas {
+        height: 50vh;
+    }
+
+    .theme-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+}

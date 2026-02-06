@@ -34,6 +34,25 @@ header {
         width: 90%;
         border-width: 6px;
     }
+
+    body {
+        padding: 1em;
+    }
+
+    header {
+        font-size: 1.6em;
+        margin-bottom: 0.4em;
+    }
+
+    .nav-button {
+        padding: 0.4em 0.7em;
+        font-size: 0.9em;
+    }
+
+    .caption {
+        font-size: 0.95em;
+        padding: 0 0.5em;
+    }
 }
 
 .caption {
