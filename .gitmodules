@@ -1,0 +1,6 @@
+[submodule "My-Portfolio"]
+	path = My-Portfolio
+	url = https://github.com/captaindirk11-lang/Game-Design.git
+[submodule "Portfolio_Dirk.Shoemaker"]
+	path = Portfolio_Dirk.Shoemaker
+	url = https://github.com/captaindirk11-lang/Portfolio_Dirk.Shoemaker.git
